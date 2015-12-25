@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Adriel.Cafe": {
+      "applicationId": "REPLACE"
+    },
+    "_default": {
+      "link": "Adriel.Cafe"
+    }
+  }
+}
