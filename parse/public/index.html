@@ -8,6 +8,7 @@
     <meta name="author" content="Adriel Café">
     <meta name="description" content="Personal site of Adriel Café" />
     <meta property="og:title" content="adriel.cafe">
+    <meta property="og:url" content="http://adriel.cafe">
     <meta property="og:image" content="https://raw.githubusercontent.com/adrielcafe/adriel.cafe/master/screenshot.png">
     <meta property="og:description" content="Personal site of Adriel Café">
     <link rel="icon" href="favicon.ico">
@@ -17,6 +18,23 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1043582559026069',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div id="space"></div>
     <main>
   		<div id="photo"></div>
@@ -45,7 +63,8 @@
           <div class="hi-icon socicon-linkedin"></div>
         </a>
       </div>
-
+      
+      <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
     </main>
   </body>
 </html>

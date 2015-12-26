@@ -87,6 +87,10 @@ a {
 	    line-height: 45px !important;
 	}
 
+	.fb_iframe_widget {
+		width: 340px;
+	}
+
 }
 
 
