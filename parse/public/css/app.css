@@ -78,13 +78,13 @@ a {
 	}
 
 	.hi-icon {
-		width: 45px !important;
-		height: 45px !important;
+		width: 32px !important;
+		height: 32px !important;
 	}
 
 	.hi-icon:before {
-		font-size: 22px !important;
-	    line-height: 45px !important;
+		font-size: 18px !important;
+	    line-height: 32px !important;
 	}
 
 }
@@ -104,8 +104,8 @@ a {
 	font-size: 0px;
 	cursor: pointer;
 	margin: 0 10px;
-	width: 70px;
-	height: 70px;
+	width: 55px;
+	height: 55px;
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
@@ -127,8 +127,8 @@ a {
 
 .hi-icon:before {
 	speak: none;
-	font-size: 32px;
-    line-height: 75px;
+	font-size: 28px;
+    line-height: 55px;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
