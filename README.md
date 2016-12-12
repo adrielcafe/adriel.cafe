@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/adrielcafe/adriel.cafe/raw/master/screenshot.png)
+![Preview](https://github.com/adrielcafe/adriel.cafe/raw/master/preview.gif)
 
 Source code of http://adriel.cafe
 
