@@ -21,7 +21,7 @@ var api = new ParseServer({
 
 var app = express();
 
-app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, '/public')));
 
 var mountPath = process.env.PARSE_MOUNT || '/api';
 app.use(mountPath, api);
