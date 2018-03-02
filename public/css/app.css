@@ -25,7 +25,7 @@ main {
 }
 
 p {
-	font-size: 16px;
+	font-size: 18px;
 	margin: 0px;
 }
 
@@ -35,20 +35,11 @@ a {
 }
 
 #photo {
-	width: 170px;
-	height: 170px;
-	margin: 25px auto;
-	border: 4px solid white;
-	border-radius: 100px;
 	background: url(../img/adriel_cafe.jpg) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 
 #name {
-	margin: -10px 0 10px 0;
+	margin: 0 0 15px 0;
 	font-size: 72px;
 }
 
@@ -58,15 +49,13 @@ a {
 }
 
 #skills {
-	font-size: 29px;
+	font-size: 26px;
 }
 
 @media (max-width: 500px){
 
-	#photo {
-		width: 125px;
-		height: 125px;
-		margin: 15px auto;
+	p {
+		font-size: 16px;
 	}
 
 	#name {
@@ -74,19 +63,75 @@ a {
 	}
 
 	#skills {
-		font-size: 20px;	
+		font-size: 18px;	
+	}
+	
+	.hexagon {
+		margin: 25px auto;
+		width: 170px !important;
+		height: 98px !important;
 	}
 
 	.hi-icon {
 		width: 32px !important;
 		height: 32px !important;
 	}
-
 	.hi-icon:before {
 		font-size: 18px !important;
 	    line-height: 32px !important;
 	}
 
+}
+
+
+/* 
+	Hexagon Photo Effect:
+	https://codepen.io/darsain/pen/Cxawq
+*/
+.hexagon {
+	margin: 75px auto;
+	position: relative;
+	width: 190px;
+	height: 110px;
+	background-position: center center;
+	z-index: 1;
+	cursor: default;
+}
+.hexagon .hexagon-face1,
+.hexagon .hexagon-face2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: inherit;
+	z-index: -1;
+	backface-visibility: hidden;
+}
+.hexagon .hexagon-face1:before,
+.hexagon .hexagon-face2:before {
+	content: '';
+	position: absolute;
+	width: 220px;
+	height: 220px;
+	background: inherit;
+}
+.hexagon .hexagon-face1 { 
+	transform: rotate(60deg); 
+}
+.hexagon .hexagon-face1:before {
+	left: 0;
+	transform-origin: left top;
+	transform: rotate(-60deg) translate(-110px, 0);
+}
+.hexagon .hexagon-face2 { 
+	transform: rotate(-60deg); 
+}
+.hexagon .hexagon-face2:before {
+	right: 0;
+	transform-origin: right top;
+	transform: rotate(60deg) translate(110px, 0);
 }
 
 
@@ -187,14 +232,14 @@ a {
 }
 
 #space {
-	position: absolute;
+	position: fixed;
 	width: 400vw;
 	height: 400vh;
 	top: 50%;
 	left: 50%;
 	margin-top: -200vh;
 	margin-left: -200vw;
-	animation: spin 240s linear infinite;
+	animation: spin 500s linear infinite;
 	background-size: 240px;
 	backface-visibility: visible;
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjEwNiIgeT0iOTAiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB4PSI3NCIgeT0iNjMiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIyMyIgeT0iNjYiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI1MCIgeT0iMTEwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNjMiIHk9IjEyOCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjQ1IiB5PSIxNDkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI5MiIgeT0iMTUxIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNTgiIHk9IjgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNDciIHk9IjMzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iOTEiIHk9IjQzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTY5IiB5PSIyOSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE4MiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNjEiIHk9IjU5IiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTM4IiB5PSI5NSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE5OSIgeT0iNzEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIyMTMiIHk9IjE1MyIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjEyOCIgeT0iMTYzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMjA1IiB5PSIxNzQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNTIiIHk9IjIwMCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjUyIiB5PSIyMTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB5PSIxOTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxMTAiIHk9IjE4NCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==);

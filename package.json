@@ -1,0 +1,23 @@
+{
+  "name": "adriel.cafe",
+  "version": "1.0.0",
+  "description": "Adriel Café's personal website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrielcafe/adriel.cafe"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.13.4",
+    "kerberos": "~0.0.x",
+    "parse": "~1.8.0",
+    "parse-server": "~2.2.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=4.3"
+  }
+}
